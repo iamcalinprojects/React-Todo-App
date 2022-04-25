@@ -1,9 +1,8 @@
 import './App.css';
 import React, {useState} from 'react';
-import TodoForm from './TodoForm';
-import {TodoList} from './TodoList';
+import TodoForm from './Components/TodoForm';
+import {TodoList} from './Components/TodoList';
 import { Container } from 'react-bootstrap';
-
 
 
 function App() {
@@ -15,12 +14,13 @@ function App() {
   function toggleComplete(id) {
     setTodos(
       todos.map(todo => {
-        if(todo.id){
+        if(todo.id === id){
           return{
             ...todo,
             completed: !todo.completed
           };
         }
+        return todo;
       })
     )
   }
@@ -43,7 +43,6 @@ function App() {
           removeTodo={removeTodo}/>
         </Container>
       </div>
-      <div>Hello World</div>
     </div>
   );
 }
