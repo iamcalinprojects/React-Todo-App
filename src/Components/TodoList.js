@@ -1,12 +1,11 @@
 import React from 'react'
-import { Container } from 'react-bootstrap';
 import { Todo } from './Todo';
 
 const TodoList = ({todos, toggleComplete, removeTodo}) => {
   return (
-      <Container className='task-container text-dark'>
-          <h3 className='bold'>Tasks</h3>
-      <ul className='ul-task'>
+      <div className='task-container'>
+          <h3 className='bold mb-4'>Tasks</h3>
+      <ul className='ul-task task'>
           {todos.map(todo =>(
               <Todo 
               key={todo.id} 
@@ -16,7 +15,7 @@ const TodoList = ({todos, toggleComplete, removeTodo}) => {
               />
           ))}
       </ul>
-      </Container>
+      </div>
   )
 }
 

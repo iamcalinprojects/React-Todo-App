@@ -68,8 +68,14 @@ html,
 }
 @media (max-width: 575px){
   .bg-work{
-    background-size: 80%;
-    background-position: 4rem 16rem;
+    background-size: 100%;
+    background-position: 0rem 12rem;
+  }
+}
+@media (max-width: 415px){
+  .bg-work{
+    background-size: 100%;
+    background-position: 0rem 12rem;
   }
 }
 .task{
@@ -92,35 +98,64 @@ li{
 .li-align{
   display: flex;
   align-items: center;
-  min-width: 100%;
   border-radius: 0.3rem;
   background-color: #5bebdd;
   padding-left: 1rem;
 }
 .li-align input{
-  padding: 2rem;
   margin-left: -0.5rem;
   width: 2rem;
   height: 2rem;
 }
 .li-display{
   width: 100%;
+  color: white;
 }
 .task-container{
-    min-height: 100vh;
     align-items: center;
     margin-top: 9rem;
     font-size: 1.324rem;
-    color: white;
+    color: black;
 }
 @media (max-width: 575px){
+  .App-header{
+    margin-top: 5rem;
+  }
   .task-container{
-    margin-top: 0rem;
+    margin-top: -15rem !important;
+  }
+}
+@media (max-width: 415px){
+  .App-header{
+    margin-top: 5rem;
+  }
+  .task-container{
+    margin-top: -15rem !important;
   }
 }
 .ul-task{
-  display: block;
   list-style: none;
+  max-width: 90%;
+  margin-left: 3rem;
+}
+@media (max-width: 975px){
+  .ul-task{
+    list-style: none;
+    margin: auto;
+  }
+}
+@media (max-width: 575px){
+  .ul-task{
+    list-style: none;
+    margin: auto;
+  }
+}
+  
+@media (max-width: 415px){
+  .ul-task{
+    list-style: none;
+    margin: auto;
+  }
 }
 .bold{
   font-weight: bold;

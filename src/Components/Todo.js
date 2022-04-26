@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Todo = ({todo, toggleComplete, removeTodo}) => {
@@ -10,11 +10,9 @@ const Todo = ({todo, toggleComplete, removeTodo}) => {
         removeTodo(todo.id)
     };
   return (
-    <Container className='mt-3'> 
-    <div className='li-align'
+    <div className='li-align mt-3'
     style={{
       backgroundColor: todo.completed ? "rgb(71, 239, 160)"  :null
-
     }}
     >
     <input 
@@ -23,15 +21,13 @@ const Todo = ({todo, toggleComplete, removeTodo}) => {
     />
     <div className='li-display'>
     <li style={{
-        color: "white",
-        textDecoration: todo.completed ? "line-through"  :null,
+        textDecoration: todo.completed ? "line-through"  :null
 
     }}>{todo.task}</li>
     </div>
 
     <Button variant='danger' onClick={handleRemoveClick}>X</Button>
     </div>
-    </Container>
   )
 }
 
