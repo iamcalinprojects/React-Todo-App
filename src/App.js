@@ -32,7 +32,7 @@ function App() {
       <div className="App bg-work row gx-0">
         <Container className="col-md-6 col-lg-7">
         <header className="App-header">
-          <h2 className='mb-4 text-dark bold'>React Todo-App</h2>
+          <h2 className='mb-4 text-dark bold'>Todo-App</h2>
           <TodoForm addTodo={addTodo}/>
         </header>
         </Container>
